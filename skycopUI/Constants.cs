@@ -1,4 +1,4 @@
-﻿namespace BAUnipark
+﻿namespace SkycopUI
 {
     public static class Constants
     {

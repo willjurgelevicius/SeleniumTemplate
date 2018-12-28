@@ -5,7 +5,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Support.Extensions;
 using TechTalk.SpecFlow;
 
-namespace BAUnipark
+namespace SkycopUI
 {
     [Binding]
     public sealed class Hooks

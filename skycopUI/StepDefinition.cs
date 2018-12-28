@@ -10,7 +10,7 @@ using OpenQA.Selenium.Support.PageObjects;
 using TechTalk.SpecFlow;
 
 
-namespace BAUnipark
+namespace SkycopUI
 {
     [Binding]
     public class StepDefinition
