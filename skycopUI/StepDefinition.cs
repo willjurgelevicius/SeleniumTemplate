@@ -48,9 +48,22 @@ namespace SkycopUI
         {
             Hooks.WaitIsDisplayed(PageObject.DeparturePort);
             PageObject.DeparturePort.SendKeys("Kaunas");
-            Hooks.WaitIsDisplayed(PageObject.DepartureSelect, click: true);
+            Hooks.WaitIsDisplayed(PageObject.DepartureSelect, false, true);
             PageObject.ArrivalPort.SendKeys("Barcelona");
-            PageObject.ArrivalSelect.Click();
+            Hooks.WaitIsDisplayed(PageObject.ArrivalSelect, false, true);
+            PageObject.AirlinesInput.SendKeys("Ryanair");
+            Hooks.WaitIsDisplayed(PageObject.AirlinesSelect, false, true);
+            PageObject.FlightNoInput.SendKeys("1568");
+            Hooks.WaitIsDisplayed(PageObject.FlightDateInput, click: true);
+            Hooks.WaitIsDisplayed(PageObject.FlightDateToday, click: true);
+            Hooks.WaitIsDisplayed(PageObject.FlightCancelled, click: true);
+            Hooks.WaitIsDisplayed(PageObject.FlightMoreThan3, click: true);
+            Hooks.WaitIsDisplayed(PageObject.FlightLessThan14d, click: true);
+            Hooks.WaitIsDisplayed(PageObject.AirlineReasonInput, click: true);
+            Hooks.WaitIsDisplayed(PageObject.AirlineReasonSelect, click: true);
+            Hooks.WaitIsDisplayed(PageObject.ReferralInput, click: true);
+            Hooks.WaitIsDisplayed(PageObject.ReferralSelect, click: true);
+            Hooks.WaitIsDisplayed(PageObject.NextStep, click: true);
         }
 
         [When(@"I fill in details")]

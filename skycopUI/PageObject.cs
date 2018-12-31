@@ -22,6 +22,45 @@ namespace SkycopUI
         [FindsBy(How = How.XPath, Using = "//div[@title='Barcelona International Airport']")]
         public IWebElement ArrivalSelect;
 
+        [FindsBy(How = How.XPath, Using = "(//input[@class='Select-input'])[3]")]
+        public IWebElement AirlinesInput;
+
+        [FindsBy(How = How.XPath, Using = "//div[@title='Ryanair']")]
+        public IWebElement AirlinesSelect;
+
+        [FindsBy(How = How.XPath, Using = "//input[@placeholder='1234']")]
+        public IWebElement FlightNoInput;
+
+        [FindsBy(How = How.XPath, Using = "//input[@name='failedFlightDate']")]
+        public IWebElement FlightDateInput;
+
+        [FindsBy(How = How.XPath, Using = "//td[@class='rdtDay rdtToday']")]
+        public IWebElement FlightDateToday;
+
+        [FindsBy(How = How.XPath, Using = "//input[@value='can']/..//span")]
+        public IWebElement FlightCancelled;
+
+        [FindsBy(How = How.XPath, Using = "//input[@value='dg3']/..//span")]
+        public IWebElement FlightMoreThan3;
+
+        [FindsBy(How = How.XPath, Using = "//input[@value='l14']/..//span")]
+        public IWebElement FlightLessThan14d;
+
+        [FindsBy(How = How.XPath, Using = "(//div[@class='Select-control'])[5]")]
+        public IWebElement AirlineReasonInput;
+
+        [FindsBy(How = How.XPath, Using = "//div[@id='react-select-6--option-0']")]
+        public IWebElement AirlineReasonSelect;
+
+        [FindsBy(How = How.XPath, Using = "(//div[@class='Select-control'])[6]")]
+        public IWebElement ReferralInput;
+
+        [FindsBy(How = How.XPath, Using = "//div[@id='react-select-7--option-0']")]
+        public IWebElement ReferralSelect;
+
+        [FindsBy(How = How.XPath, Using = "//button[@type='submit']")]
+        public IWebElement NextStep;
+
         [FindsBy(How = How.CssSelector, Using = "#time_from")]
         public IWebElement StartDateField;
 

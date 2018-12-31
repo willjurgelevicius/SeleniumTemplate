@@ -20,7 +20,7 @@ namespace SkycopUI
         {
             for (int i = 0; i < 5; i++)
             {
-                Thread.Sleep(500);
+                Thread.Sleep(1000);
                 if (element.Displayed)
                 {
                     if (scrollToObject)
@@ -30,14 +30,14 @@ namespace SkycopUI
 
                     if (click)
                     {
-                        Thread.Sleep(500); //Trying to deal with those pesky fades
+                        Thread.Sleep(1000); //Trying to deal with those pesky fades
                         element.Click();
                     }
                 break;
                 }
                 else
                 {
-                    Thread.Sleep(500);
+                    Thread.Sleep(1000);
                 }
             }
 
