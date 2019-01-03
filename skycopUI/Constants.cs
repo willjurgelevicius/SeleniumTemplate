@@ -11,6 +11,8 @@
         public const string CompanyAddress = "Wilno";
         public const string VatCode = "951753456";
         public const string CarNo = "JOU351";
+        public const string BookingNo = "K1I8SW";
+        public const string Comment = "Selenium test comment";
 
     }
 }

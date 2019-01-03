@@ -71,7 +71,7 @@ namespace SkycopUI
         {
             Thread.Sleep(5000);
             PageObject.CommentInput.SendKeys("Selenium test comment");
-            PageObject.BookingNoInput.SendKeys("K1I8SW");
+            PageObject.BookingNoInput.SendKeys(Constants.BookingNo);
             Hooks.WaitIsDisplayed(PageObject.NextStep, click: true);
         }
 
@@ -79,6 +79,14 @@ namespace SkycopUI
         public void WhenIFillInTravellerDetails()
         {
             Thread.Sleep(5000);
+            PageObject.NameInput.SendKeys(Constants.FirstName);
+            PageObject.SurnameInput.SendKeys(Constants.LastName);
+            PageObject.BirthdateInput.Click();
+            Hooks.WaitIsDisplayed(PageObject.BirthdateYearSelect, click: true);
+            Hooks.WaitIsDisplayed(PageObject.BirthdateMonthSelect, click: true);
+            Hooks.WaitIsDisplayed(PageObject.BirthdateDaySelect, click: true);
+            Hooks.WaitIsDisplayed(PageObject.TravelingAloneInput, click: true);
+
         }
 
 

@@ -67,6 +67,27 @@ namespace SkycopUI
         [FindsBy(How = How.XPath, Using = "//input[@name='bookingNumber']")]
         public IWebElement BookingNoInput;
 
+        [FindsBy(How = How.XPath, Using = "//input[@name='userName']")]
+        public IWebElement NameInput;
+
+        [FindsBy(How = How.XPath, Using = "//input[@name='userSurname']")]
+        public IWebElement SurnameInput;
+
+        [FindsBy(How = How.XPath, Using = "//input[@name='birthdate']")]
+        public IWebElement BirthdateInput;
+
+        [FindsBy(How = How.XPath, Using = "//td[@data-value='1990']")]
+        public IWebElement BirthdateYearSelect;
+
+        [FindsBy(How = How.XPath, Using = "//td[@data-value='2' and @class='rdtMonth']")]
+        public IWebElement BirthdateMonthSelect;
+
+        [FindsBy(How = How.XPath, Using = "//td[@data-value='18' and @class='rdtDay']")]
+        public IWebElement BirthdateDaySelect;
+
+        [FindsBy(How = How.XPath, Using = "//input[@name='travellingAlone' and @value='false']/..")]
+        public IWebElement TravelingAloneInput;
+
         [FindsBy(How = How.CssSelector, Using = "#time_from")]
         public IWebElement StartDateField;
 
