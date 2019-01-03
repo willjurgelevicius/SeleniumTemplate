@@ -110,5 +110,15 @@ namespace SkycopUI
 
         [FindsBy(How = How.XPath, Using = "//input[@name='userPostCode']")]
         public IWebElement PostcodeInput;
+
+        [FindsBy(How = How.XPath, Using = "//canvas[@id='sigCanvas']")]
+        public IWebElement SignatureCanvas;
+
+        [FindsBy(How = How.XPath, Using = "//button[contains(.,'Complete claim')]")]
+        public IWebElement CompleteClaimButton;
+
+        [FindsBy(How = How.XPath, Using = "//span[contains(.,'Congratulations!')]")]
+        public IWebElement ClaimSuccess;
+
     }
 }

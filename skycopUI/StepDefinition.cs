@@ -1,6 +1,8 @@
-﻿using System.Threading;
+﻿using System;
+using System.Threading;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.PageObjects;
 using TechTalk.SpecFlow;
 
@@ -73,6 +75,7 @@ namespace SkycopUI
         [When(@"I fill in traveller details")]
         public void WhenIFillInTravellerDetails()
         {
+            Random rand = new Random();
             Thread.Sleep(5000);
             PageObject.NameInput.SendKeys(Constants.FirstName);
             PageObject.SurnameInput.SendKeys(Constants.LastName);
@@ -85,12 +88,47 @@ namespace SkycopUI
             Hooks.WaitIsDisplayed(PageObject.CountrySelect, click: true);
             Hooks.WaitIsDisplayed(PageObject.LanguageInput, click: true);
             Hooks.WaitIsDisplayed(PageObject.LanguageSelect, click: true);
-            PageObject.EmailInput.SendKeys(Constants.Email);
+            PageObject.EmailInput.SendKeys(rand.Next(10000000).ToString() + "@gmail.com");
             PageObject.PhoneNoInput.SendKeys(Constants.PhoneNo);
             PageObject.AddressInput.SendKeys(Constants.Address);
             PageObject.CityInput.SendKeys(Constants.City);
             PageObject.PostcodeInput.SendKeys(Constants.Postcode);
             Hooks.WaitIsDisplayed(PageObject.NextStep, click: true);
+            Thread.Sleep(2000);
         }
+
+        [When(@"I sign aggreement")]
+        public void WhenISignAggreement()
+        {
+            Actions builder = new Actions(Driver);
+            IAction drawAction = builder.MoveToElement(PageObject.SignatureCanvas, 10, 10)
+                .ClickAndHold()
+                .MoveByOffset(50, 50)
+                .Release()
+                .Build();
+            drawAction.Perform();
+            Thread.Sleep(500);
+            IAction drawAction1 = builder.MoveToElement(PageObject.SignatureCanvas, 30, 15)
+                .ClickAndHold()
+                .MoveByOffset(50, 60)
+                .Release()
+                .Build();
+            drawAction1.Perform();
+            Thread.Sleep(500);
+            IAction drawAction2 = builder.MoveToElement(PageObject.SignatureCanvas, 80, 20)
+                .ClickAndHold()
+                .MoveByOffset(50, 70)
+                .Release()
+                .Build();
+            drawAction2.Perform();
+            Hooks.WaitIsDisplayed(PageObject.CompleteClaimButton, click: true);
+        }
+
+        [Then(@"I see that claim is completed")]
+        public void ThenISeeThatClaimIsCompleted()
+        {
+            Hooks.WaitIsDisplayed(PageObject.ClaimSuccess);
+        }
+
     }
 }
