@@ -50,17 +50,18 @@ namespace SkycopUI
             Hooks.WaitIsDisplayed(PageObject.ArrivalSelect, false, true);
             PageObject.AirlinesInput.SendKeys("Ryanair");
             Hooks.WaitIsDisplayed(PageObject.AirlinesSelect, false, true);
+            Hooks.WaitIsDisplayed(PageObject.FlightNoInput);
             PageObject.FlightNoInput.SendKeys("1568");
             Hooks.WaitIsDisplayed(PageObject.FlightDateInput, click: true);
             Hooks.WaitIsDisplayed(PageObject.FlightDateToday, click: true);
             Hooks.WaitIsDisplayed(PageObject.FlightCancelled, click: true);
-            Hooks.WaitIsDisplayed(PageObject.FlightMoreThan3, click: true);
-            Hooks.WaitIsDisplayed(PageObject.FlightLessThan14d, click: true);
-            Hooks.WaitIsDisplayed(PageObject.AirlineReasonInput, click: true);
-            Hooks.WaitIsDisplayed(PageObject.AirlineReasonSelect, click: true);
-            Hooks.WaitIsDisplayed(PageObject.ReferralInput, click: true);
-            Hooks.WaitIsDisplayed(PageObject.ReferralSelect, click: true);
-            Hooks.WaitIsDisplayed(PageObject.NextStep, click: true);
+            Hooks.WaitIsDisplayed(PageObject.FlightMoreThan3, scrollToObject: false, click: true);
+            Hooks.WaitIsDisplayed(PageObject.FlightLessThan14d, scrollToObject: false, click: true);
+            Hooks.WaitIsDisplayed(PageObject.AirlineReasonInput, scrollToObject: false, click: true);
+            Hooks.WaitIsDisplayed(PageObject.AirlineReasonSelect, scrollToObject: false, click: true);
+            Hooks.WaitIsDisplayed(PageObject.ReferralInput, scrollToObject: false, click: true);
+            Hooks.WaitIsDisplayed(PageObject.ReferralSelect, scrollToObject: false, click: true);
+            Hooks.WaitIsDisplayed(PageObject.NextStep, scrollToObject: false, click: true);
         }
 
         [When(@"I fill in flight details")]
