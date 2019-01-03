@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text.RegularExpressions;
-using System.Linq;
-using System.Threading;
-using NUnit.Framework;
+﻿using System.Threading;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.PageObjects;
@@ -37,8 +32,8 @@ namespace SkycopUI
             PageFactory.InitElements(Driver, PageObject);
         }
 
-        [Given(@"I Open Skycop website")]
-        public void GivenIOpenSkycopWebsite()
+        [Given(@"I Open Skycop claim page")]
+        public void GivenIOpenSkycopClaimPage()
         {
             Driver.Url = "https://claim.skycop.com/?lang=en";
         }
@@ -70,7 +65,7 @@ namespace SkycopUI
         public void WhenIFillInDetails()
         {
             Thread.Sleep(5000);
-            PageObject.CommentInput.SendKeys("Selenium test comment");
+            PageObject.CommentInput.SendKeys(Constants.Comment);
             PageObject.BookingNoInput.SendKeys(Constants.BookingNo);
             Hooks.WaitIsDisplayed(PageObject.NextStep, click: true);
         }
@@ -86,9 +81,16 @@ namespace SkycopUI
             Hooks.WaitIsDisplayed(PageObject.BirthdateMonthSelect, click: true);
             Hooks.WaitIsDisplayed(PageObject.BirthdateDaySelect, click: true);
             Hooks.WaitIsDisplayed(PageObject.TravelingAloneInput, click: true);
-
+            PageObject.CountryInput.SendKeys(Constants.Country);
+            Hooks.WaitIsDisplayed(PageObject.CountrySelect, click: true);
+            Hooks.WaitIsDisplayed(PageObject.LanguageInput, click: true);
+            Hooks.WaitIsDisplayed(PageObject.LanguageSelect, click: true);
+            PageObject.EmailInput.SendKeys(Constants.Email);
+            PageObject.PhoneNoInput.SendKeys(Constants.PhoneNo);
+            PageObject.AddressInput.SendKeys(Constants.Address);
+            PageObject.CityInput.SendKeys(Constants.City);
+            PageObject.PostcodeInput.SendKeys(Constants.Postcode);
+            Hooks.WaitIsDisplayed(PageObject.NextStep, click: true);
         }
-
-
     }
 }

@@ -78,7 +78,7 @@ namespace BAUnipark
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 4
- testRunner.Given("I Open Skycop website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I Open Skycop claim page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 5
  testRunner.When("I enter test airports", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 6
