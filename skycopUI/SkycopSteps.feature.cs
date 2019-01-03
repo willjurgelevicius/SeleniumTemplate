@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace BAUnipark
+namespace SkycopUI
 {
     using TechTalk.SpecFlow;
     
