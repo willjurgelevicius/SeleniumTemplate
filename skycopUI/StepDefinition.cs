@@ -66,7 +66,7 @@ namespace SkycopUI
         [When(@"I fill in flight details")]
         public void WhenIFillInDetails()
         {
-            Thread.Sleep(5000);
+            Hooks.WaitIsDisplayed(PageObject.CommentInput);
             PageObject.CommentInput.SendKeys(Constants.Comment);
             PageObject.BookingNoInput.SendKeys(Constants.BookingNo);
             Hooks.WaitIsDisplayed(PageObject.NextStep, click: true);
@@ -76,7 +76,7 @@ namespace SkycopUI
         public void WhenIFillInTravellerDetails()
         {
             Random rand = new Random();
-            Thread.Sleep(5000);
+            Hooks.WaitIsDisplayed(PageObject.NameInput);
             PageObject.NameInput.SendKeys(Constants.FirstName);
             PageObject.SurnameInput.SendKeys(Constants.LastName);
             PageObject.BirthdateInput.Click();
@@ -94,12 +94,12 @@ namespace SkycopUI
             PageObject.CityInput.SendKeys(Constants.City);
             PageObject.PostcodeInput.SendKeys(Constants.Postcode);
             Hooks.WaitIsDisplayed(PageObject.NextStep, click: true);
-            Thread.Sleep(2000);
         }
 
         [When(@"I sign aggreement")]
         public void WhenISignAggreement()
         {
+            Hooks.WaitIsDisplayed(PageObject.SignatureCanvas);
             Actions builder = new Actions(Driver);
             IAction drawAction = builder.MoveToElement(PageObject.SignatureCanvas, 10, 10)
                 .ClickAndHold()
