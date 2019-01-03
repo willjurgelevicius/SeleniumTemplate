@@ -66,11 +66,21 @@ namespace SkycopUI
             Hooks.WaitIsDisplayed(PageObject.NextStep, click: true);
         }
 
-        [When(@"I fill in details")]
+        [When(@"I fill in flight details")]
         public void WhenIFillInDetails()
         {
-            ScenarioContext.Current.Pending();
+            Thread.Sleep(5000);
+            PageObject.CommentInput.SendKeys("Selenium test comment");
+            PageObject.BookingNoInput.SendKeys("K1I8SW");
+            Hooks.WaitIsDisplayed(PageObject.NextStep, click: true);
         }
+
+        [When(@"I fill in traveller details")]
+        public void WhenIFillInTravellerDetails()
+        {
+            Thread.Sleep(5000);
+        }
+
 
     }
 }

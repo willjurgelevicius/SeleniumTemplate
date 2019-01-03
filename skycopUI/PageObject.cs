@@ -61,6 +61,12 @@ namespace SkycopUI
         [FindsBy(How = How.XPath, Using = "//button[@type='submit']")]
         public IWebElement NextStep;
 
+        [FindsBy(How = How.XPath, Using = "//textarea[@name='comments']")]
+        public IWebElement CommentInput;
+
+        [FindsBy(How = How.XPath, Using = "//input[@name='bookingNumber']")]
+        public IWebElement BookingNoInput;
+
         [FindsBy(How = How.CssSelector, Using = "#time_from")]
         public IWebElement StartDateField;
 
