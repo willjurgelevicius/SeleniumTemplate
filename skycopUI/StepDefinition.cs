@@ -55,13 +55,13 @@ namespace SkycopUI
             Hooks.WaitIsDisplayed(PageObject.FlightDateInput, click: true);
             Hooks.WaitIsDisplayed(PageObject.FlightDateToday, click: true);
             Hooks.WaitIsDisplayed(PageObject.FlightCancelled, click: true);
-            Hooks.WaitIsDisplayed(PageObject.FlightMoreThan3, scrollToObject: false, click: true);
-            Hooks.WaitIsDisplayed(PageObject.FlightLessThan14d, scrollToObject: false, click: true);
-            Hooks.WaitIsDisplayed(PageObject.AirlineReasonInput, scrollToObject: false, click: true);
-            Hooks.WaitIsDisplayed(PageObject.AirlineReasonSelect, scrollToObject: false, click: true);
-            Hooks.WaitIsDisplayed(PageObject.ReferralInput, scrollToObject: false, click: true);
-            Hooks.WaitIsDisplayed(PageObject.ReferralSelect, scrollToObject: false, click: true);
-            Hooks.WaitIsDisplayed(PageObject.NextStep, scrollToObject: false, click: true);
+            Hooks.WaitIsDisplayed(PageObject.FlightMoreThan3,  false,true);
+            Hooks.WaitIsDisplayed(PageObject.FlightLessThan14d,  false, true);
+            Hooks.WaitIsDisplayed(PageObject.AirlineReasonInput,  false, true);
+            Hooks.WaitIsDisplayed(PageObject.AirlineReasonSelect,  false, true);
+            Hooks.WaitIsDisplayed(PageObject.ReferralInput,  false, true);
+            Hooks.WaitIsDisplayed(PageObject.ReferralSelect,  false, true);
+            Hooks.WaitIsDisplayed(PageObject.NextStep,  false, true);
         }
 
         [When(@"I fill in flight details")]
