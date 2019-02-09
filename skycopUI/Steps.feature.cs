@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace SkycopUI
+namespace SeleniumTemplate
 {
     using TechTalk.SpecFlow;
     
@@ -24,7 +24,7 @@ namespace SkycopUI
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "SkycopSteps.feature"
+#line 1 "Steps.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
@@ -70,25 +70,15 @@ namespace SkycopUI
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Fill claim form")]
-        public virtual void FillClaimForm()
+        [NUnit.Framework.DescriptionAttribute("Open Google homepage")]
+        public virtual void OpenGoogleHomepage()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Fill claim form", null, ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Open Google homepage", null, ((string[])(null)));
 #line 3
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 4
- testRunner.Given("I Open Skycop claim page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 5
- testRunner.When("I enter test airports", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 6
- testRunner.And("I fill in flight details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 7
- testRunner.And("I fill in traveller details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 8
- testRunner.And("I sign aggreement", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 9
- testRunner.Then("I see that claim is completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Given("I Open Google homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             this.ScenarioCleanup();
         }
